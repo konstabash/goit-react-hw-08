@@ -1,18 +1,19 @@
 import { useDispatch } from "react-redux";
 import s from "./Contact.module.css";
 import { FaUser, FaPhoneAlt } from "react-icons/fa";
-import { deleteContact } from "../../redux/contactsOps";
+import { deleteContact } from "../../redux/contacts/operations";
 
 const Contact = ({ name, number, id }) => {
   const dispatch = useDispatch();
   const handleDelete = () => dispatch(deleteContact(id));
+  const isLong = name.length > 12;
 
   return (
-    <>
+    <div className={s.container}>
       <ul className={s.contacts}>
         <li>
           <FaUser className={s.icon} />
-          <p>{name}</p>
+          <p>{isLong ? `${name.slice(0, 11).trim()}...` : name}</p>
         </li>
         <li>
           <FaPhoneAlt className={s.icon} />
@@ -20,7 +21,7 @@ const Contact = ({ name, number, id }) => {
         </li>
       </ul>
       <button onClick={handleDelete}>Delete</button>
-    </>
+    </div>
   );
 };
 

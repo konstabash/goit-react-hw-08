@@ -8,6 +8,12 @@
   border-radius: 4px;
 } */
 
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
 .contacts {
   display: flex;
   flex-direction: column;
@@ -29,4 +35,10 @@
 button {
   padding: 4px;
   margin: auto 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

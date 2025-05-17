@@ -65,7 +65,7 @@
   top: 200px;
   right: 0;
   animation: bigmove 8s infinite;
-  animation-delay: 3s;
+  animation-delay: -4s;
 }
 
 .med {
@@ -74,7 +74,7 @@
   top: 0;
   left: 10%;
   animation: medmove 7s infinite cubic-bezier(0.32, 0.04, 0.15, 0.75);
-  animation-delay: 0.4s;
+  animation-delay: -3.5s;
 }
 
 .small {
@@ -83,7 +83,7 @@
   top: 80px;
   left: 50%;
   animation: smallmove 7s infinite cubic-bezier(1, 0.22, 0.71, 0.98);
-  animation-delay: 1.2s;
+  animation-delay: -3.5s;
 }
 
 @keyframes smallmove {

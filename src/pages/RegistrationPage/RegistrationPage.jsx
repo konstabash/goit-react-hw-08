@@ -3,7 +3,6 @@ import {
   Button,
   Container,
   Grid,
-  Link,
   TextField,
   Typography,
 } from "@mui/material";
@@ -11,6 +10,7 @@ import { Field, Formik, Form } from "formik";
 import { useDispatch } from "react-redux";
 import * as Yup from "yup";
 import { registerThunk } from "../../redux/auth/operations";
+import { Link } from "react-router";
 
 const RegistrationPage = () => {
   const dispatch = useDispatch();
@@ -95,7 +95,7 @@ const RegistrationPage = () => {
                 </Button>
                 <Grid className="footer">
                   <Typography component="h5">
-                    Already have an account? <Link href="/login">Log In</Link>
+                    Already have an account? <Link to="/login">Log In</Link>
                   </Typography>
                 </Grid>
               </Box>
